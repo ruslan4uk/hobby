@@ -1,0 +1,46 @@
+html
+  font-size: 10px
+  &:root
+    --color-title: #2c2e37
+    --color-black: #212121
+    --color-gray: #777777
+    --color-secondary: #16b5ef
+    --color-bg-partners: #f8f9fa
+    --container-width-desktop: 1140px
+
+*
+  box-sizing: border-box
+
+body
+  font-size: 1.6rem
+  font-family: 'Open Sans', sans-serif
+
+img
+  max-width: 100%
+
+.container
+  width: 100%
+  max-width: var(--container-width-desktop)
+  margin: 0 auto
+
+.title
+  font-size: 3rem
+  font-weight: 700
+  color: var(--color-title)
+  text-align: center
+  position: relative
+  text-transform: uppercase
+  padding-top: 4rem
+  &_margin-bottom
+    margin-bottom: 7rem
+  &:after
+    content: ' '
+    position: absolute
+    top: 0
+    left: 50%
+    transform: translateX(-50%)
+    width: 8rem
+    height: 0.7rem
+    background-image: url("images/waves.png")
+    background-position: center center
+    background-repeat: no-repeat

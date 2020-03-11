@@ -1,0 +1,72 @@
+// journal component
+.journal
+  &_margin-top
+    margin-top: 10rem
+  &_margin-bottom
+    margin-bottom: 10.5rem
+  &__wrap
+    display: flex
+    flex-wrap: wrap
+    box-shadow: 0 0 21px 0 rgba(6,6,6,.13)
+  &__item
+    flex: 0 0 calc(var(--container-width-desktop) / 3)
+    height: calc(var(--container-width-desktop) / 3)
+
+
+
+.journal-item
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: cover
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  align-items: center
+  align-content: center
+  padding: 4rem 2.5rem 4rem
+  &_text
+    align-content: space-between
+  &_bg-like
+    background-image: url("images/journal/bg-like.jpg")
+  &_bg-water
+    background-image: url("images/journal/bg-water.jpg")
+  &_bg-forest
+    background-image: url("images/journal/bg-forest.jpg")
+  &__icon
+    width: 8.5rem
+    height: 8.5rem
+    background-position: center center
+    background-repeat: no-repeat
+    &_like
+      background-image: url("images/journal/icon-like.png")
+    &_water
+      background-image: url("images/journal/icon-water.png")
+    &_forest
+      background-image: url("images/journal/icon-forest.png")
+
+  &__tag
+    color: var(--color-secondary)
+    font-size: 1.1rem
+    font-weight: 700
+    letter-spacing: .25rem
+    text-transform: uppercase
+  &__title
+    letter-spacing: .25rem
+    font-size: 1.6rem
+    font-weight: 700
+    line-height: 2.4rem
+    color: var(--color-black)
+    text-transform: uppercase
+    text-align: center
+    margin-bottom: 2rem
+  &__description
+    font-size: 1.4rem
+    font-weight: 400
+    line-height: 2.3rem
+    color: var(--color-gray)
+    text-align: center
+  &__count
+    font-family: "Times New Roman", Serif
+    font-size: 1.4rem
+    font-style: italic
+    color: var(--color-black)

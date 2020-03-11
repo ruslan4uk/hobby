@@ -1,5 +1,202 @@
 {% extends "layout.twig" %}
 
 {% block page %}
-    <h1>Hello</h1>
+
+    <section class="journal journal_margin-top journal_margin-bottom">
+        <div class="container">
+            <div class="title title_margin-bottom">our journal</div>
+
+            <div class="journal__wrap">
+                <div class="journal__item journal-item journal-item_bg-like">
+                    <i class="journal-item__icon journal-item__icon_like"></i>
+                </div>
+
+                <div class="journal__item journal-item journal-item_text">
+                    <div class="journal-item__tag">Love</div>
+                    <div class="journal-item__center">
+                        <div class="journal-item__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</div>
+                        <div class="journal-item__description">
+                            You know how to make best coffee in the universe? Or, maybe you’re very good
+                            in designing gloves? Tell everyone about your experience and skills.
+                        </div>
+                    </div>
+                    <div class="journal-item__count">01</div>
+                </div>
+
+                <div class="journal__item journal-item journal-item_bg-water">
+                    <i class="journal-item__icon journal-item__icon_water"></i>
+                </div>
+
+                <div class="journal__item journal-item journal-item_text">
+                    <div class="journal-item__tag">Tree</div>
+                    <div class="journal-item__center">
+                        <div class="journal-item__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit,</div>
+                        <div class="journal-item__description">
+                            You know how to make best coffee in the universe? Or, maybe you’re very good
+                            in designing gloves? Tell everyone about your experience and skills.
+                        </div>
+                    </div>
+                    <div class="journal-item__count">02</div>
+                </div>
+
+                <div class="journal__item journal-item journal-item_bg-forest">
+                    <i class="journal-item__icon journal-item__icon_forest"></i>
+                </div>
+
+                <div class="journal__item journal-item journal-item_text">
+                    <div class="journal-item__tag">Water</div>
+                    <div class="journal-item__center">
+                        <div class="journal-item__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</div>
+                        <div class="journal-item__description">
+                            You know how to make best coffee in the universe? Or, maybe you’re very good
+                            in designing gloves? Tell everyone about your experience and skills.
+                        </div>
+                    </div>
+                    <div class="journal-item__count">03</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="how-we-work how-we-work_margin-bottom">
+        <div class="container">
+            <div class="title title_margin-bottom">HOW WE WORK</div>
+
+            <div class="how-we-work__wrap">
+
+                {% set how_we_works = [
+                    {icon: 'paper', title: 'Lorem ipsum dolor sit', description: 'amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt'},
+                    {icon: 'user', title: 'Lorem ipsum dolor sit', description: 'amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt'},
+                    {icon: 'book', title: 'Lorem ipsum dolor sit', description: 'amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt'},
+                    {icon: 'good', title: 'Lorem ipsum dolor sit', description: 'amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt'},
+                ] %}
+
+                {% for how_we_work in how_we_works %}
+                    {% include '_blocks/_how-we-works__item.twig' with {item: how_we_work, index: loop.index} %}
+                {% endfor %}
+
+            </div>
+        </div>
+    </section>
+
+    <section class="travel travel_margin-bottom">
+        <div class="container">
+            <div class="title title_margin-bottom">TRAVEL WITH US</div>
+
+            <div class="travel__wrap">
+
+                {% set travels = [
+                    {title: 'Carpathian', price: '$793'},
+                    {title: 'Alps', price: '$1893'},
+                    {title: 'Pyrenees', price: '$2593'},
+                    {title: 'Rocky', price: '$2123'},
+                    {title: 'Kavkaz', price: '$593'},
+                ] %}
+
+                {% for travel in travels %}
+                    {% include '_blocks/_travel-item.twig' with {item: travel, index: loop.index} %}
+                {% endfor %}
+
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery gallery_margin-bottom">
+        <div class="container">
+            <div class="title title_margin-bottom">Gallery</div>
+
+            <div class="gallery__wrap">
+                <div class="gallery__col">
+                    <a href="" class="gallery__item">
+                        <img src="images/gallery/item_1.jpg" alt="">
+                    </a>
+                    <a href="" class="gallery__item">
+                        <img src="images/gallery/item_4.jpg" alt="">
+                    </a>
+                </div>
+                <div class="gallery__col">
+                    <a href="" class="gallery__item">
+                        <img src="images/gallery/item_2.jpg" alt="">
+                    </a>
+                    <a href="" class="gallery__item">
+                        <img src="images/gallery/item_5.jpg" alt="">
+                    </a>
+                </div>
+                <div class="gallery__col">
+                    <a href="" class="gallery__item">
+                        <img src="images/gallery/item_3.jpg" alt="">
+                    </a>
+                    <a href="" class="gallery__item">
+                        <img src="images/gallery/item_6.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="partners partners_margin-bottom">
+        <div class="container">
+            <div class="partners__wrap">
+                {% for item in 1..6 %}
+                    <div class="partners__item">
+                        <img src="images/partners/item_{{ item }}.png" alt="">
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section class="review">
+        <div class="container">
+            <div class="title title_margin-bottom">our Clients say</div>
+            <div class="review__wrap">
+
+                <div class="review__item">
+                    <div class="review__text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do  enim ad minim veniam, quis
+                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                        dolor in reprehenderit in voluptate velit esse
+                    </div>
+                    <div class="review__user">
+                        <div class="review__user-pic"><img src="images/review/user-pic_1.png" alt=""></div>
+                        <div class="review__user-name">Pavliv Yaroslav <span>Web designer</span></div>
+                    </div>
+                </div>
+
+                <div class="review__item">
+                    <div class="review__text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do  enim ad minim veniam, quis
+                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                        dolor in reprehenderit in voluptate velit esse
+                    </div>
+                    <div class="review__user">
+                        <div class="review__user-pic"><img src="images/review/user-pic_2.png" alt=""></div>
+                        <div class="review__user-name">John Scott <span>The Fringe</span></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="review-form">
+                <div class="review-form__title">contacts</div>
+                <div class="review-form__description">Sign up for our newsletter to receive updates</div>
+                <form action="" class="review-form__form">
+                    <div class="review-form__group">
+                        <input type="text" class="review-form__input" placeholder="Name">
+                    </div>
+                    <div class="review-form__group">
+                        <input type="text" class="review-form__input" placeholder="Phone">
+                    </div>
+                    <div class="review-form__group">
+                        <input type="text" class="review-form__input" placeholder="E-mail">
+                    </div>
+                    <div class="review-form__group">
+                        <button class="review-form__btn">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
 {% endblock %}

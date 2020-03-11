@@ -1,0 +1,71 @@
+// how-we-work
+.how-we-work
+  &_margin-bottom
+    margin-bottom: 10.5rem
+  &__wrap
+    display: flex
+    justify-content: space-between
+    position: relative
+    &:after
+      content: ' '
+      position: absolute
+      top: 2rem
+      left: 10rem
+      width: calc(100% - 10rem * 2)
+      height: 3px
+      background-image: url("images/how-we-work/h-line.png")
+      background-repeat: repeat-x
+
+  &__item
+    position: relative
+    z-index: 2
+    display: flex
+    flex-direction: column
+    align-items: center
+    background-image: url("images/how-we-work/v-line.png")
+    background-position: center center
+    background-repeat: repeat-y
+
+  &__number
+    width: 4rem
+    height: 4rem
+    border-radius: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+    color: var(--color-secondary)
+    border: 0.3rem solid var(--color-secondary)
+    font-family: 'Roboto', sans-serif
+    font-weight: 900
+    background-color: #ffffff
+    margin-bottom: 5.4rem
+
+  &__polygon-wrap
+    background-color: #f0f3f6
+    padding: 3rem 2.5rem 2rem 2.5rem
+    border-radius: 50%
+  &__polygon
+    width: 14rem
+    height: 14rem
+    background-image: url("images/how-we-work/polygon.png")
+    background-position: center center
+    background-repeat: no-repeat
+    display: flex
+    justify-content: center
+    align-items: center
+
+  &__icon
+    background-position: center center
+    background-repeat: no-repeat
+    width: 10rem
+    height: 10rem
+    display: block
+    margin-bottom: 1rem
+    &_paper
+      background-image: url("images/how-we-work/icon-paper.png")
+    &_user
+      background-image: url("images/how-we-work/icon-user.png")
+    &_book
+      background-image: url("images/how-we-work/icon-book.png")
+    &_good
+      background-image: url("images/how-we-work/icon-good.png")
